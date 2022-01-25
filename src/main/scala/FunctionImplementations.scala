@@ -1,12 +1,12 @@
 class FunctionImplementations {
-  def squareList(xs: List[Int]): List[Int] =
-    xs match {
-      case List() => xs
-      case y :: ys => y * y :: squareList(ys)
+  def squareList(listInput: List[Int]): List[Int] =
+    listInput match {
+      case List() => listInput
+      case element :: elements => element * element :: squareList(elements)
     }
 
-  def squareListUsingMap(xs: List[Int]): List[Int] = {
-    // Map function will do for every element in List say 'x', new 'x' will be x * x
-    xs map(x => x * x)
-  }
+  def squareListUsingMap(listInput: List[Int]): List[Int] =
+    // Map function will do for every element in List say 'element', new 'element' will be element * element
+    listInput map(element => element * element)
+
 }
